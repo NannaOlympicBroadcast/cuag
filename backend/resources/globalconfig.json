@@ -8,9 +8,14 @@
     "httpsListen": 80,
     "websocketListen": 8081
   },
-  "alipay": {
-    "enableOnlineTrade": true,
-    "serverUrl":"https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+  "onlineTrade":{
+    "enabled":true,
+    "alipay":{
+        "appId":  "",
+        "appPrivateKey": "",
+        "alipayPublicKey": "",
+        "serverUrl": "https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+    }
   },
   "containers": {
     "vRamGB": {
