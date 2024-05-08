@@ -15,7 +15,7 @@ A realization of an RTC communication, collaboration and cloud gaming platform b
 2. code-server: Collaborate Coding
 # Quickly StartUp
 run
-```python
+```shell
 #windows
 python setupwizard.py
 
