@@ -1,0 +1,27 @@
+{
+  "volcengine": {"ak": "","sk": ""},
+  "internet": {
+  "codeServerPorts": {
+    "from": 81,
+    "to": 8080},
+  "baseDomainBind": "localhost",
+    "httpsListen": 80,
+    "websocketListen": 8081
+  },
+  "alipay": {
+    "enableOnlineTrade": true,
+    "appId": 0,
+    "appPrivateKey": "",
+    "alipayPublicKey": "",
+    "serverUrl":"https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+  },
+  "Containers": {
+    "vRamGB": {
+      "game": 12,
+      "instance": 8
+    },
+    "RamGB": 8,
+    "CPUCore": 4,
+    "diskGB": 20
+  }
+}
