@@ -10,6 +10,7 @@ A realization of an RTC communication, collaboration and cloud gaming platform b
 2. Cloud Game
 3. Sell out your GPU resource(if you have NVIDIA GPU or AMD GPU) for a project that needs GPUS
 4. Remote Linux Virtual Machine
+5. enable users to deploy their own open abilities or application Integrations
 # 3-rd Party services or projects integrated
 1. VolcEngine RTC+RTM Powered By Bytedance Inc: Realtime Voice and Video Communication
 2. code-server: Collaborate Coding
