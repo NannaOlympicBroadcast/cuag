@@ -8,14 +8,16 @@
     "httpsListen": 80,
     "websocketListen": 8081
   },
-  "alipay": {
-    "enableOnlineTrade": true,
-    "appId": 0,
-    "appPrivateKey": "",
-    "alipayPublicKey": "",
-    "serverUrl":"https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+  "onlineTrade":{
+    "enabled":true,
+    "alipay":{
+        "appId":  "",
+        "appPrivateKey": "",
+        "alipayPublicKey": "",
+        "serverUrl": "https://openapi-sandbox.dl.alipaydev.com/gateway.do"
+    }
   },
-  "Containers": {
+  "containers": {
     "vRamGB": {
       "game": 12,
       "instance": 8
@@ -23,5 +25,15 @@
     "RamGB": 8,
     "CPUCore": 4,
     "diskGB": 20
+  }
+  "dataSource":{
+    "url":"",
+    "username":"",
+    "password":"",
+    "jpa":{
+      "hibernate":{
+        "ddl-auto":"update"
+      }
+    }
   }
 }
