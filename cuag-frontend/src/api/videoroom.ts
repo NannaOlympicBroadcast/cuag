@@ -1,7 +1,7 @@
 import axios from "axios";
 import {ElMessage} from "element-plus";
 
-const VIDEO_ROOM_MODULE=`/api/videoroom`
+const VIDEO_ROOM_MODULE=`/api/videoroom/`
 import VERTC, {RoomProfileType} from '@volcengine/rtc';
 import vue from "@vitejs/plugin-vue";
 
@@ -24,9 +24,9 @@ export const getSDKInitInfo =()=>{
     )
 }
 
-export const joinRoomCall=async (roomId: number) => {
+export const joinRoomCall= (roomId: number,onJoinRoom:Function) => {
     try {
-        await vue.prototype.RTCSDK
+         vue.prototype.RTCSDK
             .joinRoom(
                 sessionStorage.getItem("token"),
                 roomId,
@@ -38,8 +38,21 @@ export const joinRoomCall=async (roomId: number) => {
                     isAutoSubscribeAudio: true, // 自动订阅音频
                     isAutoSubscribeVideo: true, // 自动订阅视频
                     roomProfileType: RoomProfileType.communication // 普通音视频通话模式，例如，语音聊天室
-                })
+                }).then(()=>{
+                    onJoinRoom()
+         })
     } catch (e) {
-
+        ElMessage({
+            message:String(e),
+            center:true,
+            type:"error"
+        })
     }
 }
+
+export const leaveRoomCall = (onLeaveRoom:Function)=>{
+    vue.prototype.RTCSDK.leaveRoom().then(
+        onLeaveRoom()
+    )
+}
+
